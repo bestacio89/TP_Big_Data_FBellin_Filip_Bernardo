@@ -4,7 +4,6 @@
 
 # Fichiers générés
 *.output
-*.csv
 
 # Environnement virtuel
 .venv/
