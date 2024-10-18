@@ -1,0 +1,13 @@
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Fichiers générés
+*.output
+*.csv
+
+# Environnement virtuel
+.venv/
+
+# Fichiers de configuration spécifiques à l'utilisateur
+.idea/
