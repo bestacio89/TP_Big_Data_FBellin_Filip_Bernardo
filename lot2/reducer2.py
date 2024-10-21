@@ -9,7 +9,11 @@ for line in sys.stdin:
     # Supprimer les espaces en début et fin de ligne
     line = line.strip()
     # Diviser la ligne en champs en utilisant la tabulation comme séparateur
-    city, quantity = line.split("\t")
+    try:
+        city, quantity = line.split("\t")
+    except ValueError:
+        # Ignorer les lignes qui ne peuvent pas être divisées en 2 champs
+        continue
 
     # Convertir la quantité en nombre
     try:
@@ -29,7 +33,8 @@ for line in sys.stdin:
             if sample_size > 0:
                 sample = random.sample(quantity_list, sample_size)
                 average_quantity = sum(sample) / len(sample)
-                print(f"{current_city}\t{average_quantity:.2f}")  # Afficher la ville et la moyenne
+                # Afficher la ville et la moyenne (sans f-string)
+                print(current_city + "\t" + "{:.2f}".format(average_quantity))  
 
         # Mettre à jour la ville courante et réinitialiser la liste des quantités
         current_city = city
@@ -42,4 +47,5 @@ if current_city:
     if sample_size > 0:
         sample = random.sample(quantity_list, sample_size)
         average_quantity = sum(sample) / len(sample)
-        print(f"{current_city}\t{average_quantity:.2f}")  # Afficher la ville et la moyenne
+        # Afficher la ville et la moyenne (sans f-string)
+        print(current_city + "\t" + "{:.2f}".format(average_quantity))
