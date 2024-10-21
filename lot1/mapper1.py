@@ -9,21 +9,21 @@ for line in sys.stdin:
     words = line.split(",")
 
     # Vérification du nombre de colonnes (au moins 16)
-    if len(words) < 16:  
+    if len(words) < 16:
         continue
 
     # Extraire l'année de la colonne 'datcde' (8ème colonne, index 7)
     try:
         year = int(words[7].split("-")[0])
     except (IndexError, ValueError):
-        continue 
+        continue
 
     # Extraire le département de la colonne 'cpcli' (5ème colonne, index 4)
-    department = words[4][:2] 
+    department = words[4][:2]
 
-    # Extraire la quantité de la colonne 'qte' (17ème colonne, index 16)
+    # Extraire la quantité de la colonne 'qte' (15ème colonne, index 14)
     try:
-        quantity = int(words[16])
+        quantity = int(words[14])
     except ValueError:
         continue
 
@@ -36,4 +36,4 @@ for line in sys.stdin:
     # Vérifier si l'année est entre 2006 et 2010 et si le département est 53, 61 ou 28
     if 2006 <= year <= 2010 and department in ["53", "61", "28"]:
         # Afficher la ville (7ème colonne, index 6), la quantité et 'timbrecde' séparés par une tabulation
-        print(words[6] + "\t" + str(quantity) + "\t" + str(timbrecde))
+        print(words[5] + "\t" + str(quantity) + "\t" + str(timbrecde))
