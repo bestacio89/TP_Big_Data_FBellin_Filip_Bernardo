@@ -9,7 +9,11 @@ for line in sys.stdin:
     # Supprimer les espaces en début et fin de ligne
     line = line.strip()
     # Diviser la ligne en champs en utilisant la tabulation comme séparateur
-    city, quantity, timbrecde = line.split("\t")
+    try:
+        city, quantity, timbrecde = line.split("\t")
+    except ValueError:
+        # Ignorer les lignes qui ne peuvent pas être divisées en 3 champs
+        continue
 
     # Convertir la quantité et 'timbrecde' en nombres
     try:
@@ -29,7 +33,7 @@ for line in sys.stdin:
     else:
         # Sinon, afficher les résultats pour la ville courante
         if current_city:
-            print("{}\t{}\t{}".format(current_city, current_quantity_sum, current_timbrecde_sum))
+            print(current_city + "\t" + str(current_quantity_sum) + "\t" + str(current_timbrecde_sum))
 
         # Mettre à jour la ville courante, la quantité et 'timbrecde'
         current_city = city
@@ -38,4 +42,4 @@ for line in sys.stdin:
 
 # Afficher les résultats pour la dernière ville
 if current_city:
-    print("{}\t{}\t{}".format(current_city, current_quantity_sum, current_timbrecde_sum))
+    print(current_city + "\t" + str(current_quantity_sum) + "\t" + str(current_timbrecde_sum))
