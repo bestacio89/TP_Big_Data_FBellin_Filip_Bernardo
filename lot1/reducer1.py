@@ -29,7 +29,7 @@ for line in sys.stdin:
     else:
         # Sinon, afficher les résultats pour la ville courante
         if current_city:
-            print(f"{current_city}\t{current_quantity_sum}\t{current_timbrecde_sum}")
+            print("{}\t{}\t{}".format(current_city, current_quantity_sum, current_timbrecde_sum))
 
         # Mettre à jour la ville courante, la quantité et 'timbrecde'
         current_city = city
@@ -38,4 +38,4 @@ for line in sys.stdin:
 
 # Afficher les résultats pour la dernière ville
 if current_city:
-    print(f"{current_city}\t{current_quantity_sum}\t{current_timbrecde_sum}")
+    print("{}\t{}\t{}".format(current_city, current_quantity_sum, current_timbrecde_sum))
