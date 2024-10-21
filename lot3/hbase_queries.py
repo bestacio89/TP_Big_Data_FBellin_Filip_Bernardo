@@ -17,7 +17,7 @@ rows = table.scan(filter=(
 # Trouver la commande avec la plus grande quantité
 best_order = max(rows, key=lambda row: int(row[1][b'info:qte'].decode()), default=None)
 if best_order:
-    print(f"Meilleure commande de Nantes en 2020 : {best_order}")
+    print("Meilleure commande de Nantes en 2020 : " + str(best_order)) # Sans f-string
 else:
     print("Aucune commande trouvée pour Nantes en 2020.")
 
@@ -26,8 +26,8 @@ results = {}
 for year in range(2010, 2016):
     # Scanner la table HBase avec un filtre pour l'année
     rows = table.scan(filter=(
-        f"SingleColumnValueFilter('info', 'datcde', >=, 'binary:{year}-01-01') AND "
-        f"SingleColumnValueFilter('info', 'datcde', <=, 'binary:{year}-12-31')"
+        "SingleColumnValueFilter('info', 'datcde', >=, 'binary:" + str(year) + "-01-01') AND "  # Sans f-string
+        "SingleColumnValueFilter('info', 'datcde', <=, 'binary:" + str(year) + "-12-31')"  # Sans f-string
     ))
     results[year] = sum(1 for _ in rows)  # Compter le nombre de commandes pour chaque année
 
@@ -39,6 +39,7 @@ plt.title("Nombre total de commandes entre 2010 et 2015")
 plt.show()  # Afficher le graphique
 
 # Question 3 : Client avec le plus de frais de 'timbrecde'
+# (Cette partie nécessite une requête plus complexe pour agréger les frais de 'timbrecde' par client)
 # ... (à compléter)
 
 # Fermer la connexion à HBase
