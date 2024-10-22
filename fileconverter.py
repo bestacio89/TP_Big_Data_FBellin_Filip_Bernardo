@@ -1,36 +1,38 @@
 import pandas as pd
 import os
 
+
 def process_line_to_dict(line):
     """Processes a single line of text to extract city, codcde, quantity, and timbre."""
     try:
-        # Split the line by tab character
-        parts = line.split("\t")
+        # Split the line by tab character and strip whitespace
+        parts = [part.strip() for part in line.split("\t") if part.strip()]
 
         # Initialize dictionary to hold valid data
         data = {}
-        valid_parts = []  # This will store the non-empty parts we find
 
-        # Loop through the parts and collect only non-empty ones
-        for part in parts:
-            stripped_part = part.strip()
-            if stripped_part:  # Only consider non-empty parts
-                valid_parts.append(stripped_part)
-
-        # We want at least 4 valid parts to proceed
-        if len(valid_parts) >= 4:
-            data['City'] = valid_parts[0]  # 1st valid part
-            data['Codcde'] = valid_parts[1]  # 2nd valid part
-            data['Quantity'] = int(valid_parts[2]) if valid_parts[2].isdigit() else 0  # 3rd valid part
-            data['Timbre'] = float(valid_parts[3]) if valid_parts[3].replace('.', '', 1).isdigit() else 0.0  # 4th valid part
+        # Check if we have enough parts to assign
+        if len(parts) >= 4:
+            data['City'] = parts[0]
+            data['Codcde'] = parts[1]
+            data['Quantity'] = int(parts[2]) if parts[2].isdigit() else 0
+            data['Timbre'] = float(parts[3]) if parts[3].replace('.', '', 1).isdigit() else 0.0
         else:
-            print("Not enough valid data parts found in line: {}".format(line))  # Debug output
+            # If there are less than 4 parts, assign based on available data
+            if len(parts) > 0:
+                data['City'] = parts[0]
+            if len(parts) > 1:
+                data['Codcde'] = parts[1]
+            if len(parts) > 2:
+                data['Quantity'] = int(parts[2]) if parts[2].isdigit() else 0
+            if len(parts) > 3:
+                data['Timbre'] = float(parts[3]) if parts[3].replace('.', '', 1).isdigit() else 0.0
 
-        print("Processing: {}".format(data))  # Updated for Python 3.5.2
+        print(f"Processing: {data}")  # Debug print
         return data
 
     except ValueError as e:
-        print("Error processing line: {} | Error: {}".format(line, e))  # Debugging output for conversion issues
+        print(f"Error processing line: {line} | Error: {e}")  # Debugging output for conversion issues
         return None
 
 
@@ -49,26 +51,26 @@ def convert_text_to_excel(input_file, output_file):
                     rows.append(result)
 
         if not rows:
-            print("No data to write to Excel.")  # Updated for Python 3.5.2
+            print("No data to write to Excel.")  # Debugging check for empty rows
         else:
             # Convert the list of dictionaries to a DataFrame
             df = pd.DataFrame(rows)
 
             # Debug: Print DataFrame content to ensure it's correct
-            print(df.head())  # This line can remain as is; no formatting necessary
+            print(df.head())
 
             # Export the DataFrame to Excel
             df.to_excel(output_file, index=False)
-            print("Data exported to {} successfully.".format(output_file))  # Updated for Python 3.5.2
+            print(f"Data exported to {output_file} successfully.")
 
     except Exception as e:
-        print("An error occurred: {}".format(e))  # Updated for Python 3.5.2
+        print(f"An error occurred: {e}")
 
 
 def main():
     # Specify the path to your input text file
-    input_file = os.path.join("datavolume1", "part-00000")  # Change this to your text file path
-    output_file = os.path.join("datavolume1", "Analysed_Datalot1.xlsx")  # Desired output Excel file name
+    input_file = os.path.join("lot1", "results", "part-00000")  # Change this to your text file path
+    output_file = os.path.join("lot1", "results", "Analysed_Datalot1.xlsx")  # Desired output Excel file name
 
     convert_text_to_excel(input_file, output_file)
 
