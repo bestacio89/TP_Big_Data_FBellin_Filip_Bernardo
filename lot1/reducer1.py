@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 import sys
+from collections import defaultdict
 
-current_city = None
-current_quantity_sum = 0
-current_timbrecde_sum = 0
+# Dictionnaire pour stocker les résultats par ville et code de commande (codcde)
+city_results = defaultdict(list)
 
 # Itération sur chaque ligne de l'entrée standard (la sortie du mapper)
 for line in sys.stdin:
@@ -10,9 +11,13 @@ for line in sys.stdin:
     line = line.strip()
     # Diviser la ligne en champs en utilisant la tabulation comme séparateur
     try:
-        city, quantity, timbrecde = line.split("\t")
+        department, city, codcde, quantity, timbrecde = line.split("\t")
     except ValueError:
-        # Ignorer les lignes qui ne peuvent pas être divisées en 3 champs
+        # Ignorer les lignes qui ne peuvent pas être divisées en 5 champs
+        continue
+
+    # Vérification que le département est dans ["53", "61", "28"]
+    if department not in ["53", "61", "28"]:
         continue
 
     # Convertir la quantité et 'timbrecde' en nombres
@@ -25,21 +30,14 @@ for line in sys.stdin:
     except ValueError:
         timbrecde = 0  # Si la conversion échoue, mettre 'timbrecde' à 0
 
-    # Si la ville est la même que la ville courante
-    if city == current_city:
-        # Additionner la quantité et 'timbrecde' aux sommes courantes
-        current_quantity_sum += quantity
-        current_timbrecde_sum += timbrecde
-    else:
-        # Sinon, afficher les résultats pour la ville courante
-        if current_city:
-            print(current_city + "\t" + str(current_quantity_sum) + "\t" + str(current_timbrecde_sum))
+    # Ajouter la vente avec 'codcde', 'quantity' et 'timbrecde'
+    city_results[city].append((quantity, timbrecde, codcde))
 
-        # Mettre à jour la ville courante, la quantité et 'timbrecde'
-        current_city = city
-        current_quantity_sum = quantity
-        current_timbrecde_sum = timbrecde
+# Pour chaque ville, trier les résultats et obtenir les 5 meilleures ventes
+for city, sales in city_results.items():
+    # Trier les ventes par quantité, puis par timbrecde
+    sorted_sales = sorted(sales, key=lambda x: (-x[0], -x[1]))
 
-# Afficher les résultats pour la dernière ville
-if current_city:
-    print(current_city + "\t" + str(current_quantity_sum) + "\t" + str(current_timbrecde_sum))
+    # Afficher les 5 meilleures ventes par ville
+    for i, (quantity, timbrecde, codcde) in enumerate(sorted_sales[:5], start=1):
+        print("{}. {}\t{}\t{}\t{}".format(i, city, codcde, quantity, timbrecde))

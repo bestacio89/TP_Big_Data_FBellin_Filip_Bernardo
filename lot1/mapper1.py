@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import sys
 
+# Dictionnaire pour stocker les résultats catégorisés
+results = {}
+
 # Itération sur chaque ligne de l'entrée standard (le fichier CSV nettoyé)
 for line in sys.stdin:
     # Supprimer les espaces en début et fin de ligne
@@ -33,7 +36,23 @@ for line in sys.stdin:
     except ValueError:
         continue
 
+    # Extraire le code de commande 'codcde' de la 1ère colonne (index 0)
+    codcde = words[0]
+
     # Vérifier si l'année est entre 2006 et 2010 et si le département est 53, 61 ou 28
     if 2006 <= year <= 2010 and department in ["53", "61", "28"]:
-        # Afficher la ville (7ème colonne, index 6), la quantité et 'timbrecde' séparés par une tabulation
-        print(words[5] + "\t" + str(quantity) + "\t" + str(timbrecde))
+        city = words[5]  # Ville (7ème colonne, index 6)
+
+        # Créer une clé pour le dictionnaire avec le département et la ville
+        key = (department, city)
+
+        # Ajouter la quantité, 'timbrecde' et 'codcde' (code de commande) à la catégorie correspondante
+        if key not in results:
+            results[key] = []
+
+        results[key].append((quantity, timbrecde, codcde))
+
+# Afficher les résultats catégorisés après avoir traité toutes les lignes
+for (department, city), sales in results.items():
+    for quantity, timbrecde, codcde in sales:
+        print("{}\t{}\t{}\t{}\t{}".format(department, city, codcde, quantity, timbrecde))
