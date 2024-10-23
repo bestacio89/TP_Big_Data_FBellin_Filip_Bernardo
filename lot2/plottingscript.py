@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Load data from the part-00000 file (already containing 5% of orders)
-data = pd.read_csv('/root/datavolume1/part-00000', sep='\t', header=None, names=['city', 'quantity_sum', 'timbrecde_sum'])
+data = pd.read_csv('/root/datavolume1/part-00000', sep='\t', header=None, names=['city', 'quantity_sum', 'avg_quantity'])
 
 # Plotting the pie chart
 plt.figure(figsize=(10, 8))  # Adjust the size for better readability

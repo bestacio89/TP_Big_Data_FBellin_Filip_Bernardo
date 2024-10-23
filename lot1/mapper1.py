@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 import sys
 
-# Dictionnaire pour stocker les résultats catégorisés
-results = {}
-
 # Itération sur chaque ligne de l'entrée standard (le fichier CSV nettoyé)
 for line in sys.stdin:
     # Supprimer les espaces en début et fin de ligne
@@ -43,16 +40,5 @@ for line in sys.stdin:
     if 2006 <= year <= 2010 and department in ["53", "61", "28"]:
         city = words[5]  # Ville (7ème colonne, index 6)
 
-        # Créer une clé pour le dictionnaire avec le département et la ville
-        key = (department, city)
-
-        # Ajouter la quantité, 'timbrecde' et 'codcde' (code de commande) à la catégorie correspondante
-        if key not in results:
-            results[key] = []
-
-        results[key].append((quantity, timbrecde, codcde))
-
-# Afficher les résultats catégorisés après avoir traité toutes les lignes
-for (department, city), sales in results.items():
-    for quantity, timbrecde, codcde in sales:
-        print("{}\t{}\t{}\t{}\t{}".format(department, city, codcde, quantity, timbrecde))
+        # Sortie du mapper: key = 'codcde', value = 'quantity,timbrecde,city'
+        print("{}\t{}, {}, {}".format(codcde, quantity, timbrecde, city))

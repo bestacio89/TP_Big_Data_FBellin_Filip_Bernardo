@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad782b0-9ebb-4b4e-b2e8-833954e0f43a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TP_Big_Data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP_Big_Data.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataw_fro03/dataw_fro03_cleaned.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lot3/hbase_queries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lot3/import_hbase.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18968.29" />
+        <option value="bundled-python-sdk-f5635417b835-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18968.29" />
       </set>
     </attachedChunks>
   </component>
@@ -115,6 +111,7 @@
       <workItem from="1729242341745" duration="932000" />
       <workItem from="1729243300947" duration="318000" />
       <workItem from="1729250077387" duration="2190000" />
+      <workItem from="1729668092045" duration="597000" />
     </task>
     <servers />
   </component>

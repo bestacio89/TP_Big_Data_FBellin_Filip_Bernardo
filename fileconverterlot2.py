@@ -21,7 +21,7 @@ def process_line_to_dict(line):
         if len(valid_parts) >= 3:
             data['City'] = valid_parts[0]  # 1st valid part
             data['Quantity'] = int(valid_parts[1]) if valid_parts[1].isdigit() else 0  # 2nd valid part
-            data['Timbre'] = float(valid_parts[2]) if valid_parts[2].replace('.', '', 1).isdigit() else 0.0  # 3rd valid part
+            data['Avg_Quantity'] = float(valid_parts[2]) if valid_parts[2].replace('.', '', 1).isdigit() else 0.0  # 3rd valid part
         else:
             print("Not enough valid data parts found in line: {}".format(line))  # Debug output
 

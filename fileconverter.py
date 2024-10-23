@@ -2,51 +2,62 @@ import pandas as pd
 import os
 
 
-def process_line_to_dict(line):
-    """Processes a single line of text to extract city, codcde, quantity, and timbre."""
+def process_line_to_dict(line, headers=None):
+    """Processes a single line of text to extract city, codcde, quantity, and timbre, with optional headers."""
     try:
         # Split the line by tab character and strip whitespace
         parts = [part.strip() for part in line.split("\t") if part.strip()]
 
         # Initialize dictionary to hold valid data
-        data = {}
-
-        # Check if we have enough parts to assign
-        if len(parts) >= 4:
-            data['City'] = parts[0]
-            data['Codcde'] = parts[1]
-            data['Quantity'] = int(parts[2]) if parts[2].isdigit() else 0
-            data['Timbre'] = float(parts[3]) if parts[3].replace('.', '', 1).isdigit() else 0.0
+        if headers:
+            # Create a dictionary using headers
+            data = {headers[i]: parts[i] if i < len(parts) else '' for i in range(len(headers))}
         else:
-            # If there are less than 4 parts, assign based on available data
-            if len(parts) > 0:
-                data['City'] = parts[0]
-            if len(parts) > 1:
-                data['Codcde'] = parts[1]
-            if len(parts) > 2:
+            # If headers aren't provided, treat the parts as data fields with default names
+            data = {}
+            if len(parts) >= 4:
+                data['City'] = parts[1]
+                data['Codcde'] = parts[0]
                 data['Quantity'] = int(parts[2]) if parts[2].isdigit() else 0
-            if len(parts) > 3:
                 data['Timbre'] = float(parts[3]) if parts[3].replace('.', '', 1).isdigit() else 0.0
+            else:
+                if len(parts) > 0:
+                    data['City'] = parts[0]
+                if len(parts) > 1:
+                    data['Codcde'] = parts[1]
+                if len(parts) > 2:
+                    data['Quantity'] = int(parts[2]) if parts[2].isdigit() else 0
+                if len(parts) > 3:
+                    data['Timbre'] = float(parts[3]) if parts[3].replace('.', '', 1).isdigit() else 0.0
 
-        print(f"Processing: {data}")  # Debug print
+        print("Processing: {}".format(data))  # Debug print compatible with Python 3.5
         return data
 
     except ValueError as e:
-        print(f"Error processing line: {line} | Error: {e}")  # Debugging output for conversion issues
+        print("Error processing line: {} | Error: {}".format(line, e))  # Debugging output for conversion issues
         return None
 
 
 def convert_text_to_excel(input_file, output_file):
-    """Converts a tab-separated text file to an Excel file, processing each line individually."""
+    """Converts a tab-separated text file to an Excel file, using the first line as the header."""
     try:
         # Prepare an empty list to store the rows
         rows = []
+        headers = None
 
         # Open the input file and process each line
         with open(input_file, 'r') as file:
-            for line in file:
-                # Process each line and append the result if valid
-                result = process_line_to_dict(line.strip())
+            for i, line in enumerate(file):
+                line = line.strip()
+
+                # Use the first line as headers
+                if i == 0:
+                    headers = [header.strip() for header in line.split("\t")]
+                    print("Headers: {}".format(headers))  # Debugging output to check headers
+                    continue
+
+                # Process each line using headers
+                result = process_line_to_dict(line, headers=headers)
                 if result:  # Only append if the result is not None
                     rows.append(result)
 
@@ -61,19 +72,17 @@ def convert_text_to_excel(input_file, output_file):
 
             # Export the DataFrame to Excel
             df.to_excel(output_file, index=False)
-            print(f"Data exported to {output_file} successfully.")
+            print("Data exported to {} successfully.".format(output_file))
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print("An error occurred: {}".format(e))
 
 
 def main():
     # Specify the path to your input text file
-    input_file = os.path.join("lot1", "results", "part-00000")  # Change this to your text file path
-    output_file = os.path.join("lot1", "results", "Analysed_Datalot1.xlsx")  # Desired output Excel file name
+    input_file = os.path.join("datavolume1", "part-00000")  # Change this to your text file path
+    output_file = os.path.join("lot1", "Analysed_Datalot1.xlsx")  # Desired output Excel file name
 
     convert_text_to_excel(input_file, output_file)
 
 
-if __name__ == "__main__":
-    main()
