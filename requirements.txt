@@ -2,3 +2,6 @@ happybase
 matplotlib
 pandas
 openpyxl
+requests
+elasticsearch
+unidecode

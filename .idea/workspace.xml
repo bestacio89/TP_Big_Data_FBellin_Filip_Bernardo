@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad782b0-9ebb-4b4e-b2e8-833954e0f43a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP_Big_Data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP_Big_Data.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lot4/kibana_visualizations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lot4/logstash_config.conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +50,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.clean_data.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/source/TP_Big_Data_FBellin_Filip_Bernardo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Elasticsearch_request.executor": "Run",
+    "Python.bulkindexscript.executor": "Run",
+    "Python.clean_data.executor": "Run",
+    "Python.cleandataconverter.executor": "Run",
+    "Python.databatcher.executor": "Run",
+    "Python.datacleaner.executor": "Run",
+    "Python.elastic_index_delete.executor": "Run",
+    "Python.elasticmappingput.executor": "Run",
+    "Python.elasticpandas.executor": "Run",
+    "Python.elasticpandassingleline.executor": "Run",
+    "Python.hbaseget.executor": "Run",
+    "Python.hbaseverselastic (1).executor": "Run",
+    "Python.hbaseverselastic.executor": "Run",
+    "Python.hbaseversemastic.executor": "Run",
+    "Python.insert_from_csv.executor": "Run",
+    "Python.reducer.executor": "Run",
+    "Python.visualisationlot1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/berna/Desktop/TP_Big_Data",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="clean_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4\elastic_index_management" />
+      <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4\Formattingtools" />
+      <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.hbaseverselastic">
+    <configuration name="bulkindexscript" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP_Big_Data" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,12 +98,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lot4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/clean_data.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\berna\Desktop\TP_Big_Data\lot4\Formattingtools\bulkindexscript.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,9 +112,112 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cleandataconverter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP_Big_Data" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lot4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\berna\Desktop\TP_Big_Data\lot4\Formattingtools\cleandataconverter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="databatcher" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP_Big_Data" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lot4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\berna\Desktop\TP_Big_Data\lot4\elastic_index_management\databatcher.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="elasticmappingput" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP_Big_Data" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lot4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\berna\Desktop\TP_Big_Data\lot4\elastic_index_management\elasticmappingput.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hbaseverselastic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP_Big_Data" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lot4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lot4/hbaseverselastic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.bulkindexscript" />
+      <item itemvalue="Python.cleandataconverter" />
+      <item itemvalue="Python.databatcher" />
+      <item itemvalue="Python.elasticmappingput" />
+      <item itemvalue="Python.hbaseverselastic" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.clean_data" />
+        <item itemvalue="Python.hbaseverselastic" />
+        <item itemvalue="Python.bulkindexscript" />
+        <item itemvalue="Python.cleandataconverter" />
+        <item itemvalue="Python.databatcher" />
+        <item itemvalue="Python.elasticmappingput" />
       </list>
     </recent_temporary>
   </component>
@@ -112,6 +243,13 @@
       <workItem from="1729243300947" duration="318000" />
       <workItem from="1729250077387" duration="2190000" />
       <workItem from="1729668092045" duration="597000" />
+      <workItem from="1729681172129" duration="9536000" />
+      <workItem from="1729693354326" duration="944000" />
+      <workItem from="1729694371599" duration="3443000" />
+      <workItem from="1729698251107" duration="345000" />
+      <workItem from="1729700326638" duration="75000" />
+      <workItem from="1729701282678" duration="903000" />
+      <workItem from="1729753629260" duration="12113000" />
     </task>
     <servers />
   </component>
@@ -121,12 +259,28 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TP_Big_Data$datacleaner2.coverage" NAME="datacleaner2 Coverage Results" MODIFIED="1729519711619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/TP_Big_Data$cleandata2.coverage" NAME="cleandata2 Coverage Results" MODIFIED="1729253495852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$insert_from_csv.coverage" NAME="insert_from_csv Coverage Results" MODIFIED="1729762351116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$hbaseverselastic.coverage" NAME="hbaseverselastic Coverage Results" MODIFIED="1729764991518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$Elasticsearch_request.coverage" NAME="Elasticsearch_request Coverage Results" MODIFIED="1729696746861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$cleandataconverter.coverage" NAME="cleandataconverter Coverage Results" MODIFIED="1729763794694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$hbaseverselastic__1_.coverage" NAME="hbaseverselastic (1) Coverage Results" MODIFIED="1729758084825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$mapreduce2.coverage" NAME="mapreduce2 Coverage Results" MODIFIED="1729280243065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot2" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$hbaseget.coverage" NAME="hbaseget Coverage Results" MODIFIED="1729698533692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$reducer.coverage" NAME="reducer Coverage Results" MODIFIED="1729757903986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$databatcher.coverage" NAME="databatcher Coverage Results" MODIFIED="1729763603685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$fileconverter.coverage" NAME="fileconverter Coverage Results" MODIFIED="1729588747613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$datacleaner.coverage" NAME="datacleaner Coverage Results" MODIFIED="1729693388836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$mapper1.coverage" NAME="mapper1 Coverage Results" MODIFIED="1729521136944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot1" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$hbaseversemastic.coverage" NAME="hbaseversemastic Coverage Results" MODIFIED="1729694070834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$bulkindexscript.coverage" NAME="bulkindexscript Coverage Results" MODIFIED="1729764020235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$visualisationlot1.coverage" NAME="visualisationlot1 Coverage Results" MODIFIED="1729760640115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$elasticmappingput.coverage" NAME="elasticmappingput Coverage Results" MODIFIED="1729762510926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
     <SUITE FILE_PATH="coverage/TP_Big_Data$datacleaner__1_.coverage" NAME="datacleaner (1) Coverage Results" MODIFIED="1729583649627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/TP_Big_Data$fileconverter__1_.coverage" NAME="fileconverter (1) Coverage Results" MODIFIED="1729522641364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TP_Big_Data$fileconverter.coverage" NAME="fileconverter Coverage Results" MODIFIED="1729588747613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$elasticpandas.coverage" NAME="elasticpandas Coverage Results" MODIFIED="1729687068448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$elasticpandassingleline.coverage" NAME="elasticpandassingleline Coverage Results" MODIFIED="1729694027960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
+    <SUITE FILE_PATH="coverage/TP_Big_Data$elastic_index_delete.coverage" NAME="elastic_index_delete Coverage Results" MODIFIED="1729762503470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot4" />
     <SUITE FILE_PATH="coverage/TP_Big_Data$clean_data.coverage" NAME="clean_data Coverage Results" MODIFIED="1729510495935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/TP_Big_Data$mapper1.coverage" NAME="mapper1 Coverage Results" MODIFIED="1729521136944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot1" />
     <SUITE FILE_PATH="coverage/TP_Big_Data$datacleaner3.coverage" NAME="datacleaner3 Coverage Results" MODIFIED="1729527946635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/TP_Big_Data$mapreduce2.coverage" NAME="mapreduce2 Coverage Results" MODIFIED="1729280243065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lot2" />
   </component>
 </project>
