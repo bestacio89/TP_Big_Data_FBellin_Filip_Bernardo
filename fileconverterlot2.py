@@ -66,8 +66,8 @@ def convert_text_to_excel(input_file, output_file):
 
 def main():
     # Specify the path to your input text file
-    input_file = os.path.join("datavolume1", "part-00000")  # Change this to your text file path
-    output_file = os.path.join("datavolume1", "Analysed_Datalot2.xlsx")  # Desired output Excel file name
+    input_file = os.path.join("lot1", "results", "part-00000")  # Change this to your text file path
+    output_file = os.path.join("lot2", "results" , "Analysed_Datalot2.xlsx")  # Desired output Excel file name
 
     convert_text_to_excel(input_file, output_file)
 

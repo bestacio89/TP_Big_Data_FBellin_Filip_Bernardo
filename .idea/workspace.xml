@@ -7,7 +7,7 @@
     <list default="true" id="cad782b0-9ebb-4b4e-b2e8-833954e0f43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fileconverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/fileconverter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lot3/hbase_lot3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lot3/hbase_lot3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileconverterlot2.py" beforeDir="false" afterPath="$PROJECT_DIR$/fileconverterlot2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +251,7 @@
       <workItem from="1729700326638" duration="75000" />
       <workItem from="1729701282678" duration="903000" />
       <workItem from="1729753629260" duration="29073000" />
-      <workItem from="1729846464226" duration="5547000" />
+      <workItem from="1729846464226" duration="7378000" />
     </task>
     <servers />
   </component>
