@@ -93,7 +93,6 @@ def query_hbase_data():
     plt.ylabel("Number of Orders")
     plt.title("Total Orders from 2010 to 2015")
     plt.savefig("orders_by_year.pdf")  # Export barplot to PDF
-    plt.show()
 
     # Question 3: Client with the most 'timbrecde' fees
     client_fees = {}
