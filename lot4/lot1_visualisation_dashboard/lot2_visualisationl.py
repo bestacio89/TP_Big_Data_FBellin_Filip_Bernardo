@@ -18,7 +18,7 @@ data_view_payload = {
     "attributes": {
         "title": "Lot2DataView",  # Data view name (same as the index name)
         "timeFieldName": "datcde",  # Date field
-        "indexPattern": "my_index"  # The index pattern name
+        "indexPattern": "dataw_fro03"  # The index pattern name
     }
 }
 

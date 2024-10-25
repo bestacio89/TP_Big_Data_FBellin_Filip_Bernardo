@@ -17,7 +17,7 @@ data_view_payload = {
     "attributes": {
         "title": "DataTestVis",  # Data view name (same as the index name)
         "timeFieldName": "datcde",  # Replace with your actual date field
-        "Index pattern": "dataw_fro03"  # The index pattern name
+        "IndexPattern": "dataw_fro03"  # The index pattern name
     }
 }
 
