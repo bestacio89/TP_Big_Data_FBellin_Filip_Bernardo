@@ -62,7 +62,7 @@ def convert_text_to_excel(input_file, output_file):
         print("An error occurred: {}".format(e))
 
 def main():
-    input_file = os.path.join("datavolume1", "part-00000")  # Update as necessary
+    input_file = os.path.join("lot1", "results" ,"part-00000")  # Update as necessary
     output_file = os.path.join("lot1", "results" ,"Analysed_Datalot1.xlsx")
 
     convert_text_to_excel(input_file, output_file)
