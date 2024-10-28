@@ -99,8 +99,33 @@ Résultats à obtenir :
 2. Nombre total de commandes effectuées entre 2010 et 2015.
 3. Client avec le plus de frais de "timbrecde" (nom, prénom, nombre de commandes, somme des quantités).
 
-### Lot 4 : Visualisation avec ELK Stack (à venir)
-Le Lot 4 se concentre sur la visualisation des données avec la stack ELK (ElasticSearch, Logstash, Kibana). Un tableau de bord interactif sera créé pour afficher les résultats des requêtes et les graphiques basés sur les données analysées dans les lots précédents.
+### Lot 4 : Visualisation des données avec ELK Stack
+
+Le Lot 4 se concentre sur la visualisation des données nettoyées et analysées des lots précédents à l'aide de la stack ELK (Elasticsearch, Logstash, Kibana). L'objectif est de créer des visualisations interactives permettant une meilleure compréhension des résultats.
+
+#### Fonctionnement :
+
+- **Création d'index Elasticsearch** : Les données sont indexées dans Elasticsearch pour faciliter la recherche et l'agrégation.
+- **Suppression des anciens index** : Utilisation de `elastic_index_delete.py` pour supprimer les anciens index avant d'importer de nouvelles données.
+- **Création et mise à jour des mappings** : Le script `elasticmappingput.py` définit la structure des données dans Elasticsearch (types de données, formats, etc.).
+- **Import des données depuis HBase** : Les données importées dans HBase lors du Lot 3 sont transférées vers Elasticsearch à l'aide de `hbaseverelastic.py`.
+- **Visualisation avec Kibana** : Kibana est utilisé pour créer des dashboards et visualisations (camemberts, tableaux, etc.) basés sur les résultats des lots précédents.
+
+> ⚠️ **Attention**: Kibana est l'outil graphique principal utilisé pour créer et gérer les visualisations. Vous pouvez soit utiliser les outils graphiques fournis par Kibana directement, soit exécuter les scripts Python dans le répertoire `elastic_kibana_visualisation_manager` pour automatiser certaines tâches comme la suppression ou la création de visualisations.
+
+#### Fichiers principaux :
+
+- `elastic_index_delete.py` : Script qui permet de supprimer un index Elasticsearch existant.
+- `elasticmappingput.py` : Script pour créer ou mettre à jour le mapping de l'index dans Elasticsearch.
+- `databatcher.py` : Génère un format d'indexation bulk pour Elasticsearch à partir de données JSON nettoyées.
+- `hbaseverelastic.py` : Script qui transfère les données depuis HBase vers Elasticsearch pour analyse.
+- `visualisation_eraser.py` : Script pour supprimer les visualisations dans Kibana.
+
+#### Résultats à obtenir :
+
+1. Création d'un tableau de bord interactif affichant les 100 meilleures commandes par ville, avec une répartition des quantités et valeurs des commandes.
+2. Visualisation de la répartition des commandes par ville entre 2011 et 2016 avec des graphiques en camembert pour illustrer la moyenne et la somme des quantités.
+3. Affichage des commandes par ville et par département, en filtrant les résultats pour exclure les commandes sans "timbrecli".
 
 
 ## Installation des dépendances :
@@ -112,8 +137,6 @@ pip install -r requirements.txt
 > ⚠️ **Attention** : Pour utiliser les bibliothèques HappyBase, il est nécessaire d'installer les outils de développement C++ 14 via Visual Studio Installer sur Windows, ou de trouver les outils compatibles correspondants pour macOS/Linux.
 
 ## Exécution du projet:
-
-
 
 1. **Nettoyage des données (Lot 0) :**
 ```bash
