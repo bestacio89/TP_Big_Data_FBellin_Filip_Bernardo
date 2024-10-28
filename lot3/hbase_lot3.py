@@ -35,7 +35,7 @@ def insert_data_into_hbase(connection):
     table = connection.table('dataw_fro')
 
     # Open the cleaned CSV file
-    with open('./pythonscripts/dataw_fro03/cleaneddata.csv', 'r', encoding='utf-8') as csvfile:
+    with open('../data/dataw_fro03/cleaneddata.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         count = 0  # Initialize a counter
 

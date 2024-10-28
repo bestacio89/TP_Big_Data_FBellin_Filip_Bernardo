@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Load data from the part-00000 file (already containing 5% of orders)
-data = pd.read_csv('/root/datavolume1/part-00000', sep='\t', header=None, names=['city', 'quantity_sum', 'avg_quantity'])
+data = pd.read_csv('./results/part-00000', sep='\t', header=None, names=['city', 'quantity_sum', 'avg_quantity'])
 
 # Plotting the pie chart
 plt.figure(figsize=(10, 8))  # Adjust the size for better readability
@@ -28,6 +28,6 @@ plt.legend(wedges, data['city'], title="Cities", loc="center left", bbox_to_anch
 plt.title("Distribution of Top 5% Sales by City")
 
 # Save the plot to a PDF
-output_pdf_path = os.getenv('OUTPUT_PDF_PATH', '/root/datavolume1/distributionaleatoiredestopdesventes.pdf')
+output_pdf_path = os.getenv('OUTPUT_PDF_PATH', '/results/distributionaleatoiredestopdesventes.pdf')
 plt.savefig(output_pdf_path, bbox_inches='tight', format='pdf')
 plt.close()

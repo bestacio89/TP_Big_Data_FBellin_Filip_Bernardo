@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cad782b0-9ebb-4b4e-b2e8-833954e0f43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lot4/lot1_visualisation_dashboard/lot2_visualisationl.py" beforeDir="false" afterPath="$PROJECT_DIR$/lot4/lot1_visualisation_dashboard/lot2_visualisationl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lot4/lot1_visualisation_dashboard/visualisationlot1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lot4/lot1_visualisation_dashboard/visualisationlot1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lot2/plottingscript.py" beforeDir="false" afterPath="$PROJECT_DIR$/lot2/plottingscript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lot3/hbase_lot3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lot3/hbase_lot3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +83,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\berna\Desktop\TP_Big_Data\ presentation" />
       <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4\lot1_visualisation_dashboard" />
       <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4\elastic_index_management" />
       <recent name="C:\Users\berna\Desktop\TP_Big_Data\lot4\Formattingtools" />
@@ -251,7 +252,11 @@
       <workItem from="1729700326638" duration="75000" />
       <workItem from="1729701282678" duration="903000" />
       <workItem from="1729753629260" duration="29073000" />
-      <workItem from="1729846464226" duration="13312000" />
+      <workItem from="1729846464226" duration="13701000" />
+      <workItem from="1729874278997" duration="1995000" />
+      <workItem from="1729947355344" duration="2519000" />
+      <workItem from="1729968878335" duration="1121000" />
+      <workItem from="1730107047308" duration="530000" />
     </task>
     <servers />
   </component>
