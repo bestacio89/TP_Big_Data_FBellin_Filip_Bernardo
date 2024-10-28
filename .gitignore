@@ -10,3 +10,4 @@
 
 # Fichiers de configuration spécifiques à l'utilisateur
 .idea/
+.idea/workspace.xml

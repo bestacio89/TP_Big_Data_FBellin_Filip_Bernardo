@@ -56,11 +56,12 @@ Commande MapReduce :
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
 -input /input/cleaneddata.csv \
 -output /output/lot1 \
--mapper "python3 /big_data_tp/lot1/mapper1.py" \
--reducer "python3 /big_data_tp/lot1/reducer1.py"
+-mapper "python3 /path/to/mapper1/mapper1.py" \
+-reducer "python3 /path/to/reducer1/reducer1.py"
 ```
 
-**COMMENT FILIP: VERIFY ABOVE !!!!!!!!!!!!!!!!!**
+> ⚠️ **Attention**: SVP adapter les chemins d'accès à ceux présents dans votre conteneur Docker.
+
 
 ### Lot 2 : Analyse avec MapReduce (Période 2011-2016)
 Lot 2 s'appuie sur le Lot 1, mais pour une nouvelle période (2011-2016) et de nouveaux départements (22, 49, et 53). Cette fois-ci, l'objectif est de filtrer les commandes sans "timbrecli" et de calculer la moyenne des quantités de chaque commande. Un graphique en forme de camembert (pie chart) est généré pour illustrer la distribution des commandes par ville.
@@ -75,11 +76,12 @@ Commande MapReduce :
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
 -input /input/cleaneddata_lot2.csv \
 -output /output/lot2 \
--mapper "python3 /big_data_tp/lot2/mapper2.py" \
--reducer "python3 /big_data_tp/lot2/reducer2.py"
+-mapper "python3 /votre/chemin/mapper2.py" \
+-reducer "python3 /votre/chemin/reducer2.py"
 ```
 
-**TO VERIFY ABOVE!!!!!!!!!!!!!!!**
+> ⚠️ **Attention**: SVP adapter les chemins d'accès à ceux présents dans votre conteneur Docker.
+
 
 ### Lot 3 : Importation dans HBase et Requêtes
 Dans le Lot 3, les données filtrées sont importées dans une base NoSQL HBase pour faciliter les requêtes et l'analyse des tendances. Les scripts Python sont utilisés pour interroger la base HBase et générer des rapports en CSV, Excel et PDF.
@@ -107,10 +109,11 @@ Les dépendances nécessaires sont listées dans le fichier `requirements.txt`. 
 ```bash
 pip install -r requirements.txt
 ```
+> ⚠️ **Attention** : Pour utiliser les bibliothèques HappyBase, il est nécessaire d'installer les outils de développement C++ 14 via Visual Studio Installer sur Windows, ou de trouver les outils compatibles correspondants pour macOS/Linux.
 
 ## Exécution du projet:
 
-**Comment: VERIFY!!!!! **
+
 
 1. **Nettoyage des données (Lot 0) :**
 ```bash
